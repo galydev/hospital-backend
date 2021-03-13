@@ -23,7 +23,6 @@ router.put('/:id',
     [
         jwtValidator,
         check('name', 'name is required').not().isEmpty(),
-        check('user', 'user is required').not().isEmpty(),
         propiertiesvalidator
     ],
     updateHospital);
