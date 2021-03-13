@@ -16,10 +16,11 @@ app.use(cors());
 //Add json conver body
 app.use(express.json());
 
-
 //Database
 dbConnection();
 
+//public directory
+app.use(express.static('public'));
 //Routes
 app.use('/api/users', require('./routes/users'));
 app.use('/api/login', require('./routes/auth'));
